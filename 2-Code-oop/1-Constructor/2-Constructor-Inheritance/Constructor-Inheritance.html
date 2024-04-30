@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+    <script>
+        
+        function Employed (name){
+            this.name = name;
+            this.sayHello = function (nameHello){
+                console.log(`hello ${nameHello} selamat datang diperusahaan ${this.name}`)
+            }
+        }
+
+        function Manager(name, firstName, lastName){
+            //ini inheritance tapi tidak menurunkan tetapi mengcopy function employed
+            Employed.call(this, name);
+            //end
+            
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        const test = new Manager("Ecowhite", "Adi", "Putra");
+        test.sayHello("Adi Putra")
+
+        console.info(test)
+        console.table(test)
+
+    </script>
+</body>
+</html>

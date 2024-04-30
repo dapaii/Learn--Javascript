@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        const kosong = {};
+        const person = {
+            "nama" : "Eko kurniawan",
+            "alamat" : "Indonesia",
+            "umur": 30
+        };
+        console.table(person);
+
+        // ubah property / attribute
+        kosong["nama"] = "eko kurniawan";
+        kosong["alamat"] = "Indonesia";
+        kosong["umur"] = 30;
+        console.table(kosong);
+
+        // menghapus object
+        delete kosong["umur"];
+        console.table(kosong);
+
+        // cara memanggil property satuan
+        console.info(`Nama: ${person.nama}`);
+        console.info(`alamat: ${person.alamat}`);
+        console.info(`umur: ${person.umur}`);
+
+    </script>
+</body>
+</html>

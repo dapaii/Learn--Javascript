@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars</title>
+  </head>
+  <body>
+    <script>
+      class Cars {
+        constructor() {}
+      }
+
+      class SpesifikasiCars extends Cars {
+        constructor(tahun, gradeMesin, gradeBody, gradeInterior) {
+          super();
+          this.tahun = tahun;
+          this.gradeMesin = gradeMesin;
+          this.gradeBody = gradeBody;
+          this.gradeInterior = gradeInterior;
+        }
+
+        kumpulan() {
+        const List = {
+          tahun : ["2020","2020","2020","2020", "2021", "2022", "2023", "2024"],
+          gradeMesin : ["A", "B", "C", "D", "E"],
+          gradeBody : ["A", "B", "C", "D", "E"],
+          gradeInterior : ["A", "B", "C", "D", "E"]
+        }
+
+        const inputUsers = prompt("Masukan nilai")
+
+        const filteredTahun = List.tahun.filter(tahun => tahun === inputUsers)
+
+        if (filteredTahun.length > 0) {
+            alert(`Panjang nilai ${inputUsers}: ${filteredTahun.length}`);
+          } else {
+            alert("Tidak ada nilai");
+          }
+        }
+      }
+
+      const test = new SpesifikasiCars();
+      test.kumpulan()
+    </script>
+  </body>
+</html>

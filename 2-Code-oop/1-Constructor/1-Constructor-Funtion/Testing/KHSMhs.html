@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+
+        function Mahasiswa (nim, firsName, lastName, alamat) {
+            this.nim = nim
+            this.firsName = firsName
+            this.lastName = lastName
+            this.alamat = alamat
+
+            Random.call(this)
+            Login.call(this)
+        }
+
+        function Dosen (nim, firsName, lastName, ruangan, alamat){
+            this.nim = nim
+            this.firsName = firsName
+            this.lastName = lastName
+            this.ruangan = ruangan
+            this.alamat = alamat
+
+            Random.call(this)
+        }
+
+        function Random () {
+            
+            this.Nimrandom = function (randomNim){
+                randomNim = Math.floor((Math.random()* 100000000000) + 7)
+                return(`Nim random kamu adalah ${randomNim}`)
+            }
+            
+            this.sandi = function(length){
+                this.characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                let result = ''
+                const charactersLength = this.characters.length
+                for( let x = 0; x < length; x++){
+                    result += this.characters.charAt(Math.floor(Math.random() * charactersLength))
+                }
+                return result
+            }
+        }
+
+        function Login (nim, password) {
+            Random.call(this)
+            const popup = prompt("Anda akan diarahkan ke menu login ketik y/n")
+            if(popup === "y" || "Y"){
+                const logined = prompt(`Masukan nim anda `)
+                if(logined === this.Nimrandom)
+                {
+                    alert("succes")
+                }else{
+                    alert("salah")
+                }
+            }else{
+                alert("gagal")
+            }
+        }
+
+
+        const users = new Mahasiswa(40622100142, "Muhamad", "Daffa", "Bandung")
+        console.log(users.sandi(13))
+        users.Nimrandom()
+
+        alert(users.sandi(13))
+        alert(users.Nimrandom())
+        console.log(users.login)
+
+    </script>
+</body>
+</html>

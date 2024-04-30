@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Class</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            sayHello(name){
+                console.log(`Hello ${name}, my name is employee ${this.name}`)
+            }
+        }
+
+        //inheritance Start
+        class Manager extends Employee{
+
+            //INILAH FUNGSI EXTENDS JIKA VARIABEL SAMA MAKA BISA DI PAINGGIL TANPA MENULIS ULANG VARIABEL YANG SAMA DENGAN MENGERIKAN 'EXRENDS'
+            //sayHello(name){
+              //  console.log(`Hello ${name}, my name is manager ${this.name}`)
+            //}
+        }
+        //inheritance End
+
+        const budi = new Employee()
+        budi.name = "budi"
+        budi.sayHello("joko")
+
+        const eko = new Manager()
+        eko.name = "eko"
+        eko.sayHello("joko")
+
+        console.info(budi)
+        console.info(eko)
+
+    </script>
+</body>
+</html>

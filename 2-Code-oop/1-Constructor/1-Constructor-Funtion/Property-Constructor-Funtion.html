@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Constructor Funtion</title>
+</head>
+<body>
+    <script>
+        function Person (){
+            //property Start
+            this.firstName = "";
+            this.lastName = "";
+            //Property End
+        };
+
+        const tika = new Person();
+        //menambahkan property
+        tika.firstName = "tika"
+        tika.lastName = "mustika"
+        
+        const abil = new Person();
+        //menambahkan property
+        abil.firstName = "abil"
+        abil.lastName = "kunaedi"
+
+        console.log(tika)
+        console.log(abil)
+
+    </script>
+</body>
+</html>

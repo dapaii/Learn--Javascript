@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Freeze seal</title>
+</head>
+<body>
+    <!--
+        Tipe data object sudah sering sekali kita bahas di JavaScript Dasar dan JavaScript OOP
+        Pada materi ini, kita akan bahas banyak static method yang terdapat pada Object
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 
+    -->
+
+    <!--
+        Secara default, object bisa diubah atau dihapus properties nya
+        Jika kita ingin mengubah sebuah object menjadi object yang tidak bisa diubah atau dihapus, kita bisa menggunakan beberapa static method
+        Object.freeze() digunakan untuk mengubah object menjadi object yang tidak bisa diubah atau dihapus attribute nya
+        Object.seal() digunakan untuk mengubah object menjadi object yang tidak bisa dihapus attribute nya
+    -->
+    <script>
+        const person = {
+            firstName : "Eko",
+            lastName : "khaneddy"
+        }
+
+        //Object.freeze(person) //tidak berubah samasekali atau di hapus
+        Object.seal(person) //tidak berubah samasekali bisa di hapus
+
+        person.firstName = "Budi"
+        person.middleName = "Kurniawan" //tidak bisa menambah object mau itu seal/freeze
+        delete person.lastName
+
+        console.info(person)
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+
+<body>
+
+    <h1>Mencari data Tipe mobil Yang Dimiliki Oleh Daffa</h1>
+    <button onclick="show()">Cari</button>
+
+    <p id="demo"></p>
+
+
+    <script>
+        function Cars(noR, brand, color, tipe) {
+            this.noR = noR
+            this.brand = brand
+            this.color = color
+            this.tipe = tipe
+            this.users = function (name) {
+                return (
+                    `${name} mempunyai mobil : ${brand} tipe : ${tipe} warna : ${color} dengan reques plat No : ${noR}`
+                    )
+            }
+        }
+
+        function AllPajak(pajak){
+            this.pajak = pajak
+            this.BayarPajak = function (byrPajak){
+                console.log(`diketahui anda mempunyai angsuran dengan Nominal ${byrPajak} `)
+            }
+        }   
+
+        const allUsers = [
+            new Cars("123", "Avanza", "Merah", "A"),
+            new Cars("234", "Xenia", "Hijau", "A"),
+            new Cars("345", "Brio", "Kuning", "A"),
+            new Cars("456", "Mobilio", "Oren", "A"),
+            new Cars("567", "Mazda", "Pink", "A"),
+            new Cars("678", "Fortuner", "Hitam", "A"),
+            new Cars("789", "Civic", "Putih", "A"),
+        ];
+
+        function show() {
+            let userShow = '';
+            allUsers.forEach(function (user) {
+                userShow += user.users("Daffa") + '<br>';
+            })
+            document.getElementById("demo").innerHTML = userShow;
+        }
+
+        const dataAssets = allUsers;
+
+        const kunaedi = new AllPajak()
+        kunaedi.BayarPajak("1.000.000")
+        
+        let eko = new AllPajak(dataAssets[0])
+        
+        eko + kunaedi
+        console.table(eko)
+
+    </script>
+</body>
+
+</html>

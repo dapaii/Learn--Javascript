@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Constructor Funtion</title>
+</head>
+<body>
+    <script>
+        function Person (){
+            //property Start
+            this.firstName = "";
+            this.lastName = "";
+            //Property End
+
+            //method Start
+            this.sayHello = function (name) {
+                console.info(`hello ${name}, my name is ${this.firstName}`)
+            }
+
+            this.saySelamat = function(perusahaan){
+                console.info(`Selamat Datang ${this.firstName}, dicode ${perusahaan}`)
+            }
+            //method End
+        };
+
+        const tika = new Person();
+        tika.firstName = "tika";
+        tika.lastName = "mustika";
+        //menambahkan nilai method
+        tika.sayHello("joko");
+        tika.saySelamat("ecowhite");
+        
+        const abil = new Person();
+        abil.firstName = "abil";
+        abil.lastName = "kunaedi";
+        //menambahkan nilai method
+        abil.sayHello("joko");
+        abil.saySelamat("instink");
+
+
+        console.log(tika);
+        console.log(abil);
+
+    </script>
+</body>
+</html>

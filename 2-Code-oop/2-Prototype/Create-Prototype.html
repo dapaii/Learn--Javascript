@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        
+        function Person(firsName, lastName){
+            this.firsName = firsName
+            this.lastName = lastName
+            this.sayHello = function(name){
+                console.info(`Hello ${name}, my name is ${this.firsName}`)
+            }
+        }
+
+        // Cara membuat Prototype Start
+        Person.prototype.sayBye = function(){
+            console.log(`Good bye`)
+        }
+
+        Person.prototype.run = function(){
+            console.log(`${this.firsName}, is running`)
+        }
+        // prototype End
+
+        
+        const eko = new Person("eko","kunaedi")
+        //jadi pertama kali dicek instance ini dlu kalo disini gada baru naik ke prototype (cara ceknya di insert console) meskipun di prototype ada sayBye dia diabaikan karena ada di instance
+        eko.sayBye = function (){
+            console.info("sampai jumpa")
+        }
+        //end
+
+
+        const budi = new Person("budi","nugraha")
+
+        console.log(eko)
+        console.log(budi)
+
+        // cara memanggil Prototype Start
+        eko.sayBye()
+        budi.run()
+        // prototype End
+
+    </script>
+</body>
+</html>

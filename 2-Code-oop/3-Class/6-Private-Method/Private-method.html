@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private-Method</title>
+</head>
+<body>
+    <script>
+        class Person{
+
+            say(name){
+                if(name){
+                    this.#sayWithName(name)
+                }else{
+                    this.#sayWithOutName()
+                }
+            }
+
+            #sayWithName(name){
+                console.info(`Hello ${name}`)
+            }
+
+            #sayWithOutName(){
+                console.info("Hello")
+            }
+        }
+        const eko = new Person();
+        eko.say()
+        eko.say("eko")
+
+        //tidak bisa maksa manggil karena private
+        //eko.#sayWithOutName();
+
+    </script>
+</body>
+</html>

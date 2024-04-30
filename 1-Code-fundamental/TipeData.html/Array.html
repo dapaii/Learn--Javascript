@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        let arrayKosong = [];
+        let ArrayNama = ["Eko", "Kurniawan", "Khannedy"];
+
+        const names = [];
+        names.push("Eko");
+        names.push("kurniawan", "khannedy");
+        names.push("Budi", "Joko", "Rudi");
+        names.push(1,2,3,4,5,6)
+        console.table(names);
+
+        // memanggil nilai array satuan dengan index
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        // merubah nilai array satuan dengan index
+        names[0] = "Programmer";
+        names[1] = "Zaman";
+        names[2] = "Now";
+        console.table(names);
+
+        // mengahupus array dengan index
+        delete names[3];
+        console.table(names);
+
+        // mengisi lagi tapi tak menyatakn index berapa jadi diisi ke array index baru
+        names.push("Eko lagi");
+        console.table(names);
+
+        // mengisi ulang array yang di hapus sebelumnya
+        names[3] = "Diisi lagi";
+        console.table(names);
+
+        //array di dalam array
+        names.push(["array","dalam","array"])
+        console.table(names)
+    </script>
+</body>
+</html>

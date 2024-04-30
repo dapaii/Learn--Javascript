@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator di Attribute Selector</title>
+</head>
+<body>
+    <!--
+        Kita juga bisa menggunakan operator pada attribut selector
+        Misal [attribute=value], [attribute^=value] dan lain-lain
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax
+        
+        Data Selector Lainnya
+        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors 
+    -->
+    <div class="eko"></div>
+    <div class="ekokurniawan"></div>
+    <div class="ekokhannedy"></div>
+    <script>
+        const elements = document.querySelectorAll("div[class^='eko']")
+        console.info(elements)
+    </script>
+</body>
+</html>

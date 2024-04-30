@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Class Field</title>
+</head>
+<body>
+    <script>
+        class Configuration {
+            static name = "Belajar JS"
+            static versi = 1.0
+            static author = "Daffa"
+        }
+
+        const config = new Configuration()
+        console.info(config)
+
+        //global sifatnya bisa diakses dimana aja
+        Configuration.author = "eko khanedy"
+
+        //cara mengaksesnya bukan seperti ini
+        //console.info(config.name)
+        //end
+            
+        console.info(Configuration.name)
+        console.info(Configuration.versi)
+        console.info(Configuration.author)
+
+    </script>
+</body>
+</html>

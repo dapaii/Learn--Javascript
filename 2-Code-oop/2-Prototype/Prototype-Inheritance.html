@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    <script>
+        
+        function Employe(name){
+            this.name = name
+        }
+        function Manager(name){
+            this.name = name
+        }
+
+        // ini inheritance/turunan yang salah
+        // Manager.prototype = Employe.prototype
+
+
+        //membuat prototype inheritance/turunan Manager ke employe prototype
+        Manager.prototype = Object.create(Employe.prototype)
+        //end
+
+        Manager.prototype.sayHello = function(name){
+            console.log(`hello ${name} my name is manager ${this.name}`)
+        }
+        Employe.prototype.sayHello = function(name){
+            console.log(`hello ${name} my name is Employe ${this.name}`)
+        }
+
+        const employe = new Employe("Budi")
+        employe.sayHello("Joko")
+        const manager = new Manager("eko")
+        manager.sayHello("Joko")
+
+        console.info(employe)
+        console.info(manager)
+
+    </script>
+</body>
+</html>

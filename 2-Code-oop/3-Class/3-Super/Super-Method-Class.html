@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Class</title>
+</head>
+<body>
+    <script>
+
+        class Shape {
+            paint() {
+                console.log("paint Shape")
+            }
+        }
+
+        class Circle extends Shape {
+            oke(){
+                //super method
+                super.paint()
+                //end
+                console.log("pain circle")
+            }
+        }
+
+        const circle = new Circle()
+        circle.oke()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create textNode</title>
+</head>
+<body>
+    <!--
+        Kita juga bisa membuat Text Node menggunakan method document.createTextNode(string)
+        Hasilnya berupa Text yang bisa kita tambahkan ke Node lain
+    -->
+    <script>
+        
+        const text = document.createTextNode("Eko kurniawan khannedy")
+        document.body.appendChild(text)
+
+        console.info(text)
+        console.info(text.wholeText)
+    </script>
+</body>
+</html>

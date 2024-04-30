@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OR AND</title>
+</head>
+<body>
+    <script>
+        // || => ngambil nilai trutly dari kiri ke kanan, kalo di kiri falsy maka ambil kanan
+        // && => ngambil nilai trutly dari kanan ke kiri, kalo di kanan falsy maka ambil kiri
+        console.info("hello" || "") //hello karena di baca dari kiri ke kanan siapa yg trutly
+        console.info("" || []) //array karena di baca dari kiri ke kanan siapa yg trutly
+        console.info("0" || "NoL") //0 semua trutly tapi yang di ambil dikiri duluan
+        console.info(0 || "NoL") //Nol yang keluar Nol karena kiri pertama falsy
+        console.info(null || "Null") //yang di ambil yang string null karena null kiri falsy
+        console.info(undefined || "undefined") //yang di ambil kanan string undefined karena kiri undefine nilai
+        console.info(0 || false) //kalo dua duanya falsy maka yang di ambil yang kanan
+
+        //implemtasi
+        const person = {
+            firstName: "",
+            lastName: "khannedy"
+        }
+
+        const name = person.firstName || person.lastName;
+        console.info(name)
+
+    </script>
+</body>
+</html>

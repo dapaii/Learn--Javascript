@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khs Mhs</title>
+</head>
+<body>
+    <div id="outputMahasiswa"></div>
+    <div id="outputAdmin"></div>
+
+    <script>
+
+        class Person{
+            constructor(firtsName, lastName){
+                this.firtsName = firtsName
+                this.lastName = lastName
+            }
+
+
+        }
+
+        class Admin extends Person {
+            constructor(firtsName,lastName, nilaiHadir, nilaiUts, nilaiUas){
+                super(firtsName, lastName)
+                this.nilaiHadir = nilaiHadir
+                this.nilaiUts = nilaiUts
+                this.nilaiUas = nilaiUas
+            }
+        }
+
+        const allMahasiswa = [
+            new Person("Arduino","kehi"),
+            new Person("albar","centaki"),
+            new Person("ekoneki","arbani"),
+            new Person("daffa","kehi")
+        ]
+
+        const allAdmin = [
+            new Admin("","", "10","100","100"),
+            new Admin("","", "4","100","40"),
+            new Admin("","","6","80","90"),
+            new Admin("","", "8","50","40"),
+        ]
+
+        const formattedMahasiswa = allMahasiswa.map(person => ({ Nama_Mahasiswa: person.firtsName + person.lastName}))
+        const formattedAdmin = allAdmin.map(admin => ({ Kehadiran: admin.nilaiHadir  ,Nilai_Uts: admin.nilaiUts, Nilai_Uas:  admin.nilaiUas}))
+    
+        const outputMahasiswaDiv = document.getElementById('outputMahasiswa')
+        const outputAdminDiv = document.getElementById('outputAdmin')
+
+        formattedMahasiswa.forEach(person =>{
+            const para = document.createElement('p')
+            para.textContent= `Nama Mahasiswa : ${person.Nama_Mahasiswa}`
+            outputMahasiswaDiv.appendChild(para)
+        })
+
+console.info(formattedMahasiswa)        
+    </script>
+</body>
+</html>

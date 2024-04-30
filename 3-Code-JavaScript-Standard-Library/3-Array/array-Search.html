@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array search</title>
+</head>
+<body>
+
+    <!--
+        find(value => boolean) : value          | Mencari data sesuai dengan kondisi
+        findIndex(value => boolean) : number    | Mencari data index sesuai dengan kondisi
+        includes(value) : boolean               | Mengecek apakah terdapat data
+        indexOf(value) : number                 | Mengecek posisi index data
+        lastIndexOf(value) : number             | Mengecek posisi index data terakhir
+    -->
+
+    <script>
+        {
+            //array search
+            const source = [1,2,3,4,5,1,2,3,4,5];
+
+            console.info(source.find(value => value > 3)); //4 temukan value yang lebih dari 3
+            console.info(source.findIndex(value => value > 3)); //3 temukan index ke 3
+            console.info(source.includes(7)); //false apakah terdapat angka 7
+            console.info(source.indexOf(5)); //4 mengecek posisi index data terdepan
+            console.info(source.lastIndexOf(5)); //9 mengecek posisi index data terbelakang
+            console.info(source.indexOf(2)); //1 mengecek posisi index data terdepan 
+            console.info(source.lastIndexOf(2)) //6 mengecek posisi index data terbelakang
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrasi Pasien</title>
+</head>
+<body>
+
+
+    <script>
+
+        function Pasien (kPasien, sPasien, bPasien){
+            this.kPasien = kPasien
+            this.sPasien = sPasien
+            this.bPasien = bPasien
+        }
+
+        function Kamar (kKamar, firstNameKamar, lastNameKamar, bKamar){
+            this.kKamar = kKamar
+            this.firstNameKamar = firstNameKamar
+            this.lastNameKamar = lastNameKamar
+            this.bKamar = bKamar
+        }
+
+        function Dokter(kDokter, firstNameDokter, lastNameDokter, bPemeriksaan){
+            this.kDokter = kDokter
+            this.firstNameDokter = firstNameDokter
+            this.lastNameDokter = lastNameDokter
+            this.bPemeriksaan = bPemeriksaan
+        }
+
+        function Property(lMenginap, diskon){
+            this.lMenginap = lMenginap
+            this.diskon = diskon
+        }
+        
+        const AllPasien = [
+            new Pasien("PS0001", "Pasien Baru", 500000),
+            new Pasien("PS0002", "Pasien Lama", 400000),
+            new Pasien("PS0003", "Pasien BPJS", 300000),
+            new Pasien("PS0004", "Pasien Akses", 200000)
+        ]
+
+        const AllKamar = [
+            new Kamar("112233","Kamar","Melati",1000000),
+            new Kamar("223344","Kamar","Mawar",2000000),
+            new Kamar("334455","Kamar","Dahlia",3000000),
+            new Kamar("445566","Kamar","Anggrek",4000000),
+            new Kamar("556677","Kamar","Tulip",5000000)
+        ]
+
+        const AllDokter = [
+        new Dokter("DK001","dr.","Andi",500000),
+        new Dokter("DK002","dr.","Joko",400000),
+        new Dokter("DK003","dr.","Karni",300000),
+        new Dokter("DK004","dr.","Amin",200000),
+        new Dokter("DK005","dr.","Udin",100000)
+        ]
+
+        const AllProperty = [
+            new Property("10 hari","50% dari biaya kamar"),
+            new Property("8 hari","40% dari biaya kamar"),
+            new Property("6 hari","30% dari biaya kamar"),
+            new Property("4 hari","20% dari biaya kamar"),
+            new Property("3 hari","10% dari biaya kamar")
+        ]
+        
+
+        const inputPasien = AllPasien.map(pasien => ({ Kode_Pasien: pasien.kPasien, Status_Pasien: pasien.sPasien, Biaya_Pasien: pasien.bPasien}))
+        const inputKamar = AllKamar.map(Kamar => ({ kode_Kamar: Kamar.kKamar, Nama_Kamar: Kamar.firstNameKamar + Kamar.lastNameKamar, Biaya_Kamar: Kamar.bKamar}))
+        const inputDokter = AllDokter.map(Dokter => ({ Kode_Dokter: Dokter.kDokter, Nama_Dokter: Dokter.firstNameDokter + Dokter.lastNameDokter, Biaya_Pemeriksaan: Dokter.bPemeriksaan}))
+        const inputProperty = AllProperty.map(Property => ({ Lama_Menginap: Property.lMenginap, Diskon: Property.diskon}))
+
+        console.table(inputPasien)
+        console.table(inputKamar)
+        console.table(inputDokter)
+        console.table(inputProperty)
+
+    </script>
+
+</body>
+</html>

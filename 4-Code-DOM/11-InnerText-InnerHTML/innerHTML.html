@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+    <!--
+        Jika Text Content dan Inner Text hanya mengambil text saja, Inner HTML akan mengambil seluruh element HTML nya sebagai text
+        Ini juga cocok jika kita ingin mengubah isi dari element menggunakan text yang berisi tag HTML
+    -->
+
+    <p id="content">
+        <script>
+            console.info("Hello World!")
+        </script>
+        <b>Eko</b> Kurniawan <i>Khanndey</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content")
+        console.info(content.innerHTML)
+    </script>
+</body>
+</html>

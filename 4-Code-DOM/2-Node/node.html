@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+    <!--
+        Node adalah base class dari Document, Element dan Attr
+        Artinya semua fitur yang dimiliki di Node dimiliki diturunannya
+        Node dalam DOM itu bentuknya adalah Tree (pohon), artinya dengan Node, kita bisa melihat Parent (node diatas nya), Children (node dibawahnya), Sibling (node disebelahnya)
+        https://developer.mozilla.org/en-US/docs/Web/API/Node 
+
+    -->
+
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+    <script>
+        const menu = document.getElementById("menu")
+        console.info(menu)
+
+        const second = document.getElementById("second")
+        console.info(second)
+    </script>
+</body>
+</html>

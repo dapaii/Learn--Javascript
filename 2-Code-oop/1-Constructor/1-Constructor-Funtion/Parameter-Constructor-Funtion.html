@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Constructor Funtion</title>
+</head>
+<body>
+    <script>
+        //Parameter Start => ()
+        function Person (firstName, lastName){
+            //Parameter End
+
+            //Argumen Start
+            this.firstName = firstName;
+            this.lastName = lastName;
+            //Argumen End
+
+            //method Start
+            this.sayHello = function (name) {
+                console.info(`hello ${name}, my name is ${this.firstName}`)
+            }
+            //method End
+        };
+
+        //menambah property pada constructor parameter
+        const tika = new Person("tika", "mustika");
+        tika.sayHello("joko");
+        
+        //menambah property pada constructor parameter
+        const abil = new Person("abil", "kunaedi");
+        abil.sayHello("joko");
+
+
+        console.table(tika);
+        console.table(abil);
+
+    </script>
+</body>
+</html>

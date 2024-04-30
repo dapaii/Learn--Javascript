@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Class</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(firstName){
+                this.firstName = firstName
+            }
+
+            sayHello(name){
+                console.log(`Hello ${name}, my name is employee ${this.firstName}`)
+            }
+        }
+
+        //inheritance Start
+        class Manager extends Employee{
+
+            //Super constructor. jadi harus ada yang jadi super "super" construktor di child kalo tidak ada super nanti err
+            constructor(firstName, lastName){
+                super(firstName)
+                this.lastName = lastName
+            }
+            //Super constructor End
+
+            sayHello(name){
+                console.log(`Hello ${name}, my name is employee ${this.firstName} ${this.lastName}`)
+            }
+        }
+        //inheritance End
+
+        const budi = new Employee("budi")
+        budi.sayHello("joko")
+
+        const eko = new Manager("eko", "kanedi")
+        eko.sayHello("joko")
+
+
+        console.info(budi)
+        console.info(eko)
+
+    </script>
+</body>
+</html>

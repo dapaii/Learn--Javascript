@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object assign</title>
+</head>
+<body>
+    <!--
+        Kadang kita ada kasus menggabungkan semua attribute dari sebuah object ke object lain
+        Hal ini bisa kita lakukan dengan menggunakan Object.assign(target, source)
+    -->
+    <script>
+        const target = {
+            firstName : "Eko"
+        }
+        const source = {
+            //firstName : "Budi", // property yg sama
+            lastName : "khannedy"
+        }
+
+        Object.assign(target, source) //jadi object source di copy kan ke taget yang nantinya di object target ada lastName tapi jika ada property yang sama akan di tulis ulang seperti contoh
+        console.info(target)
+        console.info(source)
+    </script>
+</body>
+</html>

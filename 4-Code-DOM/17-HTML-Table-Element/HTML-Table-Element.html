@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Salah satu HTML Element yang kompleks selain Form adalah Table
+        HTML Table Element juga memiliki banyak sekali property, method dan event yang khusus
+        https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement 
+    -->
+
+    <!--
+        Sebenarnya masih banyak element-element HTML lainnya yang terdapat dalam Standard Web API
+        Namun akan terlalu banyak jika dibahas satu per-satu
+        Oleh karena itu saya sarankan teman-teman eksplore HTML element yang memang ingin dipelajari di halaman documentation resminya 
+        https://developer.mozilla.org/en-US/docs/Web/API#interfaces 
+    -->
+    <table id="orderRevenue" border="1">
+        <caption>Order Revenue</caption>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Income</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>100000000</td>
+            </tr>
+            
+            <tr>
+                <td>February</td>
+                <td>200000000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>300000000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+        const orderRevenue = document.getElementById("orderRevenue")
+        console.info(orderRevenue.caption)
+        console.info(orderRevenue.tHead)
+        console.info(orderRevenue.tBodies)
+        console.info(orderRevenue.tFoot)
+    </script>
+</body>
+</html>

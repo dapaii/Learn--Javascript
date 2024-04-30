@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Static Properties</title>
+  </head>
+  <body>
+    <!--
+        Number merupakan function yang digunakan untuk melakukan konversi ke tipe data number
+        Jika data tidak bisa dikonversi ke number, secara otomatis hasilnya adalah NaN
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number 
+    -->
+
+    <!--
+        Number memiliki banyak static properties, seperti :
+        Number.MIN_VALUE untuk mendapat number minimal
+        Number.MAX_VALUE untuk mendapat number maksimal
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#static_properties 
+    -->
+
+    <script>
+      const data = Number("eko");
+      console.info(Number.isInteger(data)); // false karena Number bukan integer
+      console.info(Number.isNan(data)); // true => karena memang Number dari data eko memang isNan (Not a number)
+    </script>
+  </body>
+</html>

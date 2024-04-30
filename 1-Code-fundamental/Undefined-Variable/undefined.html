@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+
+        let name1
+        let name2 = 'hukhukhuk'
+
+        if(name1 === undefined || name2 === undefined){
+            if(name1){
+                console.info("name 1 : Define")
+            }else if(name2){
+                console.info("name 2 : Define")
+            }
+            console.info(`nilai name 1 : ${name1},  nilai name 2 : ${name2}`)
+        }else{
+            console.info(`name 1 & name 2 : Define`)
+            console.info(`nilai name 1 : ${name1},  nilai name 2 : ${name2}`)
+        }
+        
+
+        const names = ["Eko", "kurniawan"];
+        delete names[0];
+
+        //kenapa undifined karna array kalo di delete jadi undefined bukn terhapus hilang 
+        if(names[0] === undefined){
+            console.info("Array Undefined");
+        }else{
+            console.info("Array Defined");
+        }
+
+        // Object akan undefined karena objeck=>name tidak ada        
+        const person = {};
+        if(person.name === undefined){
+            console.info("object undefined")
+        }else{
+            console.info("object undefined")
+        }
+
+    </script>
+</body>
+</html>

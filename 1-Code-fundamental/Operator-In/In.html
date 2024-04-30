@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName : "Eko",
+            lastName : "Khannedy"
+        }
+
+        // In => nilainya true/false mengecek suatu variabel apakah mempunyai property yang diminta atau tidak
+        if("firstName" in person){
+            console.info(`Hello ${person.firstName}`);
+        }else{
+            console.info("Hello")
+        }
+
+        // In Operator Undefined/Null Property
+        //jadi jika nilai undefined maka akan di tampilkan undefine
+        const student = {
+            firstName: "Eko",
+            middleName: undefined,
+            lastName: "khannedy"
+        }
+
+        if("middleName" in student){
+            console.info(`Hello ${student.middleName}`);
+        }else{
+            console.info(`Hello Student`)
+        }
+
+        //hasilnya tue padahal nilainya null karena dia tidak peduli isinya apa asal ada nilainy selama indexnya ada maka true(mengecek index bukn value)
+        const names = [null, "kurniawan", null];
+        const resault = 0 in names;
+        document.writeln(`<p>${resault}</p>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Content dan Inner Text</title>
+</head>
+<body>
+
+    <!--
+        Selain textContent, terdapat property lain bernama innerText untuk mendapatkan isi text sebuah element
+        Tujuan nya sama, untuk mengambil atau mengubah isi text konten sebuah element, namun ada perbedaannya
+        textContent akan mengembalikan semua isi dari konten text sebuah element
+        innerText bisa tahu, bagian text mana yang ditampilkan, dan dia hanya akan mengambil text yang ditampilkan saja
+    -->
+
+    <p id="content">
+        <script>
+            console.info("Hello World!")
+        </script>
+        <b>Eko</b> Kurniawan <i>Khanndey</i>
+    </p>
+    <script>
+        const content = document.getElementById("content")
+        console.info(content.textContent)
+        console.info(content.innerText)
+    </script>
+</body>
+</html>

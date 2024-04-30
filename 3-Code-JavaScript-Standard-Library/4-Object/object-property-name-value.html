@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Property Name & Value</title>
+</head>
+<body>
+    <!--
+        Object juga memiliki static method untuk digunakan mengambil semua properties names dan values
+        Object.values() digunakan untuk mengambil semua property value
+        Object.getPropertyNames() digunakan untuk mengambil semua properti name
+    -->
+    <script>
+        const person = {
+            firstName : "Eko",
+            lastName : "khannedy"
+        }
+
+        console.log(Object.value(person)) //kalo mau liat value yang ada di object pake ini
+        console.log(Object.getOwnPropertyNames(person)) //kalo mau liat Property yang ada di object pake ini
+    </script>
+</body>
+</html>

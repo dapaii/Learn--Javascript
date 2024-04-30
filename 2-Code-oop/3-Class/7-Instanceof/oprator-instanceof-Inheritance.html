@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operataor instanceof Inheritance</title>
+</head>
+<body>
+    <script>
+        class Employee {
+
+        }
+
+        class Manager extends Employee {
+
+        }
+
+        const budi = new Employee()
+        const eko = new Manager()
+
+        console.info(eko)
+        console.info(budi)
+
+        console.info(budi instanceof Employee) //true
+        console.info(budi instanceof Manager) //false (false karena budi bukan turunan dari Maneger)
+
+        console.info(eko instanceof Manager) //true (true karena eko turunan dari employee karena ada extends)
+        console.info(eko instanceof Employee) //true
+
+    </script>
+</body>
+</html>

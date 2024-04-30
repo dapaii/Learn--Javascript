@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method class</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+          //tidak direkomendasikan karena akan menempel di instance object class
+          //this.sayHello = function(name){
+          //console.info(`hello ${name}, my name is ${this.name}`)
+        }
+        //end
+
+        //yang direkomendasikan nantinya akan menempel di property
+        sayHello(name) {
+          console.info(`Hello ${name}, my name is ${this.name}`);
+        }
+        //end
+      }
+
+      const eko = new Person("Eko");
+      console.info(eko);
+      console.info(eko.name);
+      eko.sayHello('Joko')
+
+      const budi = new Person("Budi");
+      console.log(budi);
+      console.log(budi.name);
+    </script>
+  </body>
+</html>

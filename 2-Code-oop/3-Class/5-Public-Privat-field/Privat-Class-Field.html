@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Field</title>
+</head>
+<body>
+    <script>
+
+        class Counter{
+            //Private field Start
+            #counter = 0;
+            //Private Field End
+
+            increment(){
+                //meaikkan
+                this.#counter++;
+            }
+
+            decrement(){
+                //menurunkan
+                this.#counter--;
+            }
+
+            get(){
+                return this.#counter;
+            }
+        }
+
+        const counter = new Counter()
+        //increment + jadi 5 kali dipanggil lima kali naik jadinya 1+1+1+1+1 = 5. klo mau nurunin pake decrement (-)
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+
+        console.info(counter.get())
+
+        //tidak akan merubah privat field
+        //counter.increment = 100
+
+        //counter.#increment = 100
+        end
+        console.info(counter)
+
+    </script>
+</body>
+</html>

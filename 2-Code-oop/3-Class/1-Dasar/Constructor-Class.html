@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Class</title>
+</head>
+<body>
+    <script>
+        
+        class Person {
+            //Constructor pengganti parameter yang tidak ada di Class. Start
+            constructor (name){
+                //property Start
+                    console.info(`membuat person ${name}`)
+                //property End
+            }
+            // Constructor End
+
+        }
+        
+        const person = new Person("eko")
+        console.log(person)
+
+        const person2 = new Person("budi")
+        
+        console.info(person)
+        console.info(person2)
+
+    </script>
+</body>
+</html>
